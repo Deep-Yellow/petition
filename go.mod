@@ -79,3 +79,6 @@ require (
 	sigs.k8s.io/structured-merge-diff/v4 v4.2.3 // indirect
 	sigs.k8s.io/yaml v1.3.0 // indirect
 )
+
+replace cloud.google.com/go => github.com/googleapis/google-cloud-go v0.34.0
+
