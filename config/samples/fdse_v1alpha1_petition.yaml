@@ -1,0 +1,12 @@
+apiVersion: fdse.cloudnative/v1alpha1
+kind: Petition
+metadata:
+  labels:
+    app.kubernetes.io/name: petition
+    app.kubernetes.io/instance: petition-sample
+    app.kubernetes.io/part-of: petition
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: petition
+  name: petition-sample
+spec:
+  # TODO(user): Add fields here

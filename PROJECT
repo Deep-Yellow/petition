@@ -1,0 +1,16 @@
+domain: cloudnative
+layout:
+- go.kubebuilder.io/v3
+projectName: petition
+repo: deep-yellow/petition
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: cloudnative
+  group: fdse
+  kind: Petition
+  path: deep-yellow/petition/api/v1alpha1
+  version: v1alpha1
+version: "3"
