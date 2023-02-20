@@ -28,8 +28,7 @@ type PetitionSpec struct {
 	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
 
-	// Foo is an example field of Petition. Edit petition_types.go to remove/update
-	Foo string `json:"foo,omitempty"`
+	CloudConfig string `json:"cloudConfig"`
 }
 
 // PetitionStatus defines the observed state of Petition
