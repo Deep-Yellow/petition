@@ -397,14 +397,14 @@ func (r *PetitionReconciler) SetupWithManager(mgr ctrl.Manager) error {
 				klog.Warningf("Failed to report pod created, namespace: %s, name: %s, err: %v", pod.Namespace, pod.Name, err)
 			}
 		},
-		UpdateFunc: func(oldObj, newObj interface{}) {
-			newPod := newObj.(*v1.Pod)
-			addLabelAndSelector(newPod)
-			_, err := cloudCli.CoreV1().Pods(newPod.Namespace).Update(context.Background(), newPod, metav1.UpdateOptions{})
-			if err != nil && !errors.IsNotFound(err) {
-				klog.Warningf("Failed to find and update pod, namespace: %s, name: %s, err: %v", newPod.Namespace, newPod.Name, err)
-			}
-		},
+		//UpdateFunc: func(oldObj, newObj interface{}) {
+		//	newPod := newObj.(*v1.Pod)
+		//	addLabelAndSelector(newPod)
+		//	_, err := cloudCli.CoreV1().Pods(newPod.Namespace).Update(context.Background(), newPod, metav1.UpdateOptions{})
+		//	if err != nil && !errors.IsNotFound(err) {
+		//		klog.Warningf("Failed to find and update pod, namespace: %s, name: %s, err: %v", newPod.Namespace, newPod.Name, err)
+		//	}
+		//},
 		DeleteFunc: func(obj interface{}) {
 			pod := obj.(*v1.Pod)
 			addLabelAndSelector(pod)
