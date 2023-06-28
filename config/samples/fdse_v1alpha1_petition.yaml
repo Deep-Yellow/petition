@@ -1,0 +1,6 @@
+apiVersion: fdse.cloudnative/v1alpha1
+kind: Petition
+metadata:
+  name: petition-sample
+spec:
+  # TODO(user): Add fields here

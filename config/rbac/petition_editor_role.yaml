@@ -1,0 +1,24 @@
+# permissions for end users to edit petitions.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: petition-editor-role
+rules:
+- apiGroups:
+  - fdse.cloudnative
+  resources:
+  - petitions
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - fdse.cloudnative
+  resources:
+  - petitions/status
+  verbs:
+  - get
